@@ -86,7 +86,7 @@
 
   // 💞
   {
-    // 값이 없을 때만 ?? 뒤의 것 사용
+    // 값이 없을 때만 ?? 뒤의 것 사용 (null, undefined)
     const name = '';
     const userName = name ?? 'Guest';
     console.log(userName);  // 

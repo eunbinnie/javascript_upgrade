@@ -91,15 +91,26 @@ const student = {
   const fruits = [...fruits1, ...fruits2];
   console.log(fruits);
 
+  const fruit = ['🍒', '🍋', '🍇'];
+  // 기존 배열에 추가
+  fruit.push('🍑');
+  // 새로운 배열에 추가해서 만들기
+  fruit1 = [...fruit, '🥝'];
+
   // object merge
   const dog1 = { dog1: '🐶' };
   const dog2 = { dog2: '🐕' };
-  const dog = { ...dog1, ...dog2 };
+  // ✅ Good Code ✨
+  const dog0 = Object.assign(dog1, dog2);
+  console.log(dog0);
+  // ✅ Better! Code ✨
+  const dog = { ...dog1, ...dog2, dog3: '🐩' };
   console.log(dog);
 }
 
 
 // Default parameters
+// 📣 Default parameter is only for undefined (not null)
 {
   // 💩
   {
